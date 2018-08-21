@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Electron Hello World!</title>
+	<link rel="stylesheet" type="text/css" href="../css/stylesheet.css">
+	<script src="settings.js"></script>
+  </head>
+  
+  <body>
+  <div id="sample">
+	
+
+	</div>
+	<div id="login"></div>
+	<div id="content">
+		<script src="nicEdit.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		if(!project_settings.plain_text_editor) {
+			bkLib.onDomLoaded(function() {
+			new nicEditor({fullPanel : true}).panelInstance('text_input');
+		});
+		}
+		
+		</script>
+		<!-- <textarea rows="100" cols="50" id="area1"></textarea> -->
+		
+
+		<script src="mail.js"></script>
+		<input id="from" type="text" placeholder="Sender"></br>
+		<input id="address" type="text" placeholder="Recipient(s), separate with ;"></br>
+		<input id="subject" type="text" placeholder="subject"></br>
+		<textarea id="text_input" rows="20" cols="50"></textarea></br>
+		<button id="submit" onClick="sendMail()">Send</button>
+	</div>
+  </body>
+</html>
+
+<!-- thisTestPassword -->
